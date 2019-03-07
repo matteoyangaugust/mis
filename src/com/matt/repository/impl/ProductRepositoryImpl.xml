@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_products>
+        <![CDATA[
+            select * from product
+        ]]>
+    </select_all_products>
+
+    <delete_product_by_sn>
+        <![CDATA[
+            delete from product where sn = :sn
+        ]]>
+    </delete_product_by_sn>
+
+    <select_product_by_sn>
+        <![CDATA[
+            select * from product where sn = :sn
+        ]]>
+    </select_product_by_sn>
+</SQL>

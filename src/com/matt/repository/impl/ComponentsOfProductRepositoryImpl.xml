@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_components_of_product>
+        <![CDATA[
+            select * from component_of_product
+        ]]>
+    </select_all_components_of_product>
+
+    <delete_component_of_product_by_component_sn>
+        <![CDATA[
+            delete from component_of_product where component_sn in (:component_sn)
+        ]]>
+    </delete_component_of_product_by_component_sn>
+
+    <delete_component_of_product_by_product_sn>
+        <![CDATA[
+            delete from component_of_product where product_sn = :product_sn
+        ]]>
+    </delete_component_of_product_by_product_sn>
+</SQL>

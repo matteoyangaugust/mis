@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_components>
+        <![CDATA[
+            select * from component
+        ]]>
+    </select_all_components>
+
+    <delete_component_by_sn>
+        <![CDATA[
+            delete from component where sn = :sn
+        ]]>
+    </delete_component_by_sn>
+
+    <select_component_by_sn>
+        <![CDATA[
+            select * from component where sn = :sn
+        ]]>
+    </select_component_by_sn>
+</SQL>

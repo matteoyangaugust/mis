@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    <http auto-config="true">
+        <access-denied-handler error-page="/login/accessDenied.do" />
+        <intercept-url pattern="/login/**" access="ROLE_ANONYMOUS" />
+        <intercept-url pattern="/css/**" access="ROLE_ANONYMOUS,ROLE_ADMIN, ROLE_PURCHASE, ROLE_MOLDING, ROLE_RUBBER, ROLE_STAMPING, ROLE_PRODUCT" />
+        <intercept-url pattern="/js/**" access="ROLE_ANONYMOUS,ROLE_ADMIN, ROLE_PURCHASE, ROLE_MOLDING, ROLE_RUBBER, ROLE_STAMPING, ROLE_PRODUCT" />
+        <intercept-url pattern="/fonts/**" access="ROLE_ANONYMOUS,ROLE_ADMIN, ROLE_PURCHASE, ROLE_MOLDING, ROLE_RUBBER, ROLE_STAMPING, ROLE_PRODUCT" />
+        <intercept-url pattern="/images/**" access="ROLE_ANONYMOUS,ROLE_ADMIN, ROLE_PURCHASE, ROLE_MOLDING, ROLE_RUBBER, ROLE_STAMPING, ROLE_PRODUCT" />
+        <intercept-url pattern="/**" access="ROLE_ADMIN, ROLE_PURCHASE, ROLE_MOLDING, ROLE_RUBBER, ROLE_STAMPING, ROLE_PRODUCT" />
+        <form-login login-page="/login/init.do"
+                     default-target-url="/initialize/loading.do"
+                     authentication-failure-url="/login/loginFailed.do"/>
+        <logout logout-success-url="/login/init.do" />
+    </http>
+    <beans:bean id="userDetailService" class="com.matt.security.UserDetailServiceImpl"/>
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailService" />
+    </authentication-manager>
+    <beans:bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+</beans:beans>

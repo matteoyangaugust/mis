@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    /*font: 600 12px/1 'Open Sans', sans-serif;*/
+    color: #333;
+    background: #FFF;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background: #FFF;
+    display: flex;
+    min-height: 100%;
+}
+
+.sidebar {
+    position: absolute;
+    width: 220px;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #245269;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    transform: translate3d(0,0,0);
+    transition: transform .3s;
+}
+
+.content.isOpen {
+    transform: translate3d(220px,0,0);
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:before {
+    content: '\f0c9';
+    font: 42px fontawesome;
+}
+
+/* Demo Navigation */
+
+.title {
+    cursor: pointer;
+    font-size: 120%;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #eee;
+    border-bottom: 1px solid #222;
+    background: #2a2a2a;
+}
+
+.canvas_nav li .canvas-menu-a {
+    position: relative;
+    display: block;
+    padding: 20px 0 20px 40%;
+    font-size: 100%;
+    color: #636c72;
+    border-bottom: 1px solid #222;
+    text-decoration:none;
+}
+
+.canvas_nav li .canvas-menu-a:before {
+    font: 100% fontawesome;
+    position: absolute;
+    top: 19px;
+    left: 20px;
+}
+.canvas_nav li:nth-child(1) .canvas-menu-a:before { content: '\f1b2'; top: 24px;}
+.canvas_nav li:nth-child(2) .canvas-menu-a:before { content: '\f1b3'; top: 24px;}
+.canvas_nav li:nth-child(3) .canvas-menu-a:before { content: '\f219'; top: 24px;}
+.canvas_nav li:nth-child(4) .canvas-menu-a:before { content: '\f0ac'; top: 24px;}
+.canvas_nav li:nth-child(5) .canvas-menu-a:before { content: '\f08b'; top: 24px;}
+
+.canvas_nav li .canvas-menu-a:hover {
+    background: #eee;
+}
+
+.canvas_nav li .canvas-menu-a.active {
+    box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
+    background: #444;
+}
+
+.canvas-menu-a{
+    cursor: pointer;
+}
+
+/* Demo Description */
+
+h1 {
+    margin: 25px 0 15px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+}

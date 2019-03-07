@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_system_users>
+        <![CDATA[
+            select * from system_user
+        ]]>
+    </select_all_system_users>
+    <select_system_user_by_username>
+        <![CDATA[
+            select * from system_user where username = :username
+        ]]>
+    </select_system_user_by_username>
+
+    <select_system_user_by_role>
+        <![CDATA[
+            select * from system_user where role = :role
+        ]]>
+    </select_system_user_by_role>
+    <select_system_user_by_several_sn>
+        <![CDATA[
+            select * from system_user where sn in (:sn)
+        ]]>
+    </select_system_user_by_several_sn>
+    <delete_system_user_by_sn>
+        <![CDATA[
+            delete from system_user where sn = :sn
+        ]]>
+    </delete_system_user_by_sn>
+</SQL>

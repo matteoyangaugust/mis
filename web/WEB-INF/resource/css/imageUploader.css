@@ -1,0 +1,33 @@
+.image-holder{
+    display: table-cell;
+    vertical-align: middle;
+    border:  2px dotted #595959;
+    width: 40vh;
+    height: 40vh;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.addImage{
+    width: 50%;
+    height: 50%;
+    border: 3px dotted #636c72;
+    font-size: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addImagePlus{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+    color: #636c72;
+}
+
+.tempImage{
+    width:90%;
+}

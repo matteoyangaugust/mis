@@ -1,0 +1,82 @@
+.formOutSide{
+    background-color:#000000;
+    background-color:rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 10px #000000;
+}
+.labelText {
+    color: white;
+    font-weight: bold;
+}
+.swalLabelText{
+    color: black;
+    font-weight: bold;
+    font-family: Microsoft JhengHei;
+}
+
+.swalLabelText_left{
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-family: Microsoft JhengHei;
+}
+
+.warningText {
+    color:#FFDD55;
+    font-weight: bold;
+    font-family: Microsoft JhengHei;
+}
+
+.dangerText {
+    color:red;
+    font-weight: bold;
+    font-family: Microsoft JhengHei;
+}
+
+.greyText {
+    color:grey;
+    font-weight: bold;
+    font-family: Microsoft JhengHei;
+}
+@media screen and (max-width: 736px){
+    .labelDivText{
+        text-align: left;
+    }
+    .inputW50w100{
+        width: 100% !important;
+    }
+    #unit{
+        text-align: center;
+    }
+    input{
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 736px){
+    .timeTook{
+        padding-left: 5px;
+    }
+    .labelDivText{
+        text-align: right;
+    }
+    .inputW50w100{
+        width: 50% !important;
+    }
+    #unit{
+        text-align: left;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    height: 2.375rem;
+}
+
+.btn {
+    white-space: normal;
+}
+
+input[type="radio"]{
+    display: none;
+}

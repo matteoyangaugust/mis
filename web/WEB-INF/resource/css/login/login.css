@@ -1,0 +1,18 @@
+body{
+    font-family: Microsoft JhengHei;
+}
+
+#loginDiv{
+    /* support Safari, Chrome */
+    -webkit-border-radius: 5px;
+    /* support firefox */
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #888888;
+    border: solid 1px #d0d5d8;
+    background-color: #eceeef;
+}
+
+.submitBtn{
+    border-radius: 50%;
+}

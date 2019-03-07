@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_process_categories>
+        <![CDATA[
+            select * from process_category
+        ]]>
+    </select_all_process_categories>
+
+    <select_process_category_by_sn>
+        <![CDATA[
+            select * from process_category where sn = :sn
+        ]]>
+    </select_process_category_by_sn>
+</SQL>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_sub_menus>
+        <![CDATA[
+            select * from system_sub_menu
+        ]]>
+    </select_all_sub_menus>
+</SQL>

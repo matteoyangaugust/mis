@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <delete_history>
+        <![CDATA[
+            delete from material_flowing_history where sn = :sn
+        ]]>
+    </delete_history>
+
+    <select_histories>
+        <![CDATA[
+            select * from material_flowing_history
+        ]]>
+    </select_histories>
+
+    <select_history_by_sn>
+        <![CDATA[
+            select * from material_flowing_history where sn = :sn
+        ]]>
+    </select_history_by_sn>
+</SQL>

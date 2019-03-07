@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_product_flowing_history>
+        <![CDATA[
+            select * from product_flowing_history
+        ]]>
+    </select_all_product_flowing_history>
+
+    <delete_product_flowing_history_by_sn>
+        <![CDATA[
+            delete from product_flowing_history where sn = :sn
+        ]]>
+    </delete_product_flowing_history_by_sn>
+</SQL>

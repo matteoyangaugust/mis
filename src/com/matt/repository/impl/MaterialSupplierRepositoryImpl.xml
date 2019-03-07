@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_all_material_supplier>
+        <![CDATA[
+            select * from material_supplier
+        ]]>
+    </select_all_material_supplier>
+
+    <delete_supplier_by_sn>
+        <![CDATA[
+            delete from material_supplier where sn = :sn
+        ]]>
+    </delete_supplier_by_sn>
+</SQL>

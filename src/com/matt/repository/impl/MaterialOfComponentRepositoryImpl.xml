@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <select_material_of_component>
+        <![CDATA[
+            select * from elements_of_component
+        ]]>
+    </select_material_of_component>
+
+    <select_material_of_component_by_component_sn>
+        <![CDATA[
+            select * from elements_of_component where component_sn = :componentSn
+        ]]>
+    </select_material_of_component_by_component_sn>
+
+    <delete_material_of_component_by_component_sns>
+        <![CDATA[
+            delete from elements_of_component where component_sn in (:component_sn)
+        ]]>
+    </delete_material_of_component_by_component_sns>
+
+    <delete_material_of_component_by_component_sn>
+        <![CDATA[
+            delete from elements_of_component where component_sn = :component_sn
+        ]]>
+    </delete_material_of_component_by_component_sn>
+
+    <delete_material_of_component_by_component_sn_and_type>
+        <![CDATA[
+            delete from elements_of_component where component_sn = :component_sn and elements_type = :element_type
+        ]]>
+    </delete_material_of_component_by_component_sn_and_type>
+</SQL>
